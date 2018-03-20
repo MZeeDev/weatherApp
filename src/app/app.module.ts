@@ -3,13 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { authService } from './authentication/auth.service';
 import { AuthGuard } from './authentication/auth.guard';
-
-import { TestComponentComponent } from './test-component/test-component.component';
 
 const routes: Routes = [
   { path: 'login', loadChildren: './authentication/authentication.module#AuthenticationModule' },
@@ -18,9 +15,7 @@ const routes: Routes = [
 ]
 @NgModule({
   declarations: [
-    AppComponent,
-
-    TestComponentComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
