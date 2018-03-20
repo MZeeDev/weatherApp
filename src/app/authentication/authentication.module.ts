@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-
 const routes:Routes = [
   {
     path: "",
@@ -17,13 +16,11 @@ const routes:Routes = [
     component: SignUpComponent
   }
 ]
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpModule,
-  
     RouterModule.forChild(routes)
   ],
   declarations: [SignInComponent, SignUpComponent]
