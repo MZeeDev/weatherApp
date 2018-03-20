@@ -8,6 +8,7 @@ import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { authService } from './authentication/auth.service';
 import { AuthGuard } from './authentication/auth.guard';
+import { TestForGithubComponent } from './test-for-github/test-for-github.component';
 
 const routes: Routes = [
   {path:'login', loadChildren:'./authentication/authentication.module#AuthenticationModule'},
@@ -15,7 +16,8 @@ const routes: Routes = [
 ]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestForGithubComponent
   ],
   imports: [
     BrowserModule,
