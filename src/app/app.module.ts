@@ -11,7 +11,8 @@ import { AuthGuard } from './authentication/auth.guard';
 
 const routes: Routes = [
   {path:'login', loadChildren:'./authentication/authentication.module#AuthenticationModule'},
-  {path:'',loadChildren:'./weather/weather.module#WeatherModule'},
+  {path:'welcome', loadChildren:'./welcome/welcome.module#WelcomeModule'},
+  {path:'',loadChildren:'./weather/weather.module#WeatherModule'}
 ]
 @NgModule({
   declarations: [

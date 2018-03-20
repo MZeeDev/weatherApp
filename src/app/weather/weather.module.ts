@@ -12,6 +12,8 @@ import { AuthGuard } from '../authentication/auth.guard';
 
 const routes:Routes=
 [
+  {path:'',component:HomepageComponent},
+  {path:'Home',component:MainPageComponent},
   {path:':cityName',component:CityDetailComponent},
   {path:'**', component:MainPageComponent}
 ]
