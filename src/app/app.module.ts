@@ -9,22 +9,26 @@ import { RouterModule } from '@angular/router';
 import { authService } from './authentication/auth.service';
 import { AuthGuard } from './authentication/auth.guard';
 
+import { TestComponentComponent } from './test-component/test-component.component';
+
 const routes: Routes = [
-  {path:'login', loadChildren:'./authentication/authentication.module#AuthenticationModule'},
-  {path:'welcome', loadChildren:'./welcome/welcome.module#WelcomeModule'},
-  {path:'',loadChildren:'./weather/weather.module#WeatherModule'}
+  { path: 'login', loadChildren: './authentication/authentication.module#AuthenticationModule' },
+  { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomeModule' },
+  { path: '', loadChildren: './weather/weather.module#WeatherModule' }
 ]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+    TestComponentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes)
-   ],
-  providers: [authService,AuthGuard],
+  ],
+  providers: [authService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
