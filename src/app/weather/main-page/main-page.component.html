@@ -2,12 +2,12 @@
   <div class="row">
     <div class="col-sm-5 form-group">
       <label for="weather">Name</label>
-      <input type="text" id="weather" class="form-control" name="weather" ngModel
-       required [(ngModel)]="tempCityName">
+      <input type="text" id="weather" class="form-control" name="weather" ngModel required [(ngModel)]="tempCityName">
       <br>
-      <button type="submit" class="btn btn-primary" >Check Weather Status</button>
+      <button type="submit" class="btn btn-primary">Check Weather Status</button>
       <br>
       <app-detail [cityName]="cityName"></app-detail>
     </div>
   </div>
 </form>
+<a href="#" class="btn btn-success" [routerLink]="['login']">Log In</a>

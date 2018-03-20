@@ -5,9 +5,7 @@ import { authService } from './auth.service';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(private authService:authService,private router:Router) {
-    
-    }
+  constructor(private authService:authService,private router:Router){}
 
   canActivate(
     next: ActivatedRouteSnapshot,
