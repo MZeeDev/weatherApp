@@ -1,0 +1,18 @@
+{{cityName}}
+
+<table class="table table-{1:striped} table-inverse table-responsive">
+  <thead class="thead-default">
+    <tr>
+      <th>City Name</th>
+      <th>Minimum Temperature</th>
+      <th>Maximum Temperature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of weatherStatus.list">
+      <td>{{cityName}}</td>
+      <td>{{c.temp.min}}</td>
+      <td>{{c.temp.max}}</td>
+    </tr>
+  </tbody>
+</table>
