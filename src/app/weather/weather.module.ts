@@ -13,8 +13,14 @@ import { AuthGuard } from '../authentication/auth.guard';
 const routes:Routes=
 [
   {path:'',component:HomepageComponent},
-  {path:'Home',component:MainPageComponent},
-  {path:':cityName',component:CityDetailComponent},
+  //{path:'Home',component:MainPageComponent},
+   {path:'Home',component:HomepageComponent ,children:
+  [
+    {path:'new',component:MainPageComponent},
+     {path:':cityName',component:CityDetailComponent}
+            
+   ]},
+  // {path:':cityName',component:CityDetailComponent},
   {path:'**', component:MainPageComponent}
 ]
 @NgModule({
