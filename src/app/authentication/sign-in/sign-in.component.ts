@@ -9,25 +9,22 @@ import { authService } from '../auth.service';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-  @ViewChild('signIn') signInForm:NgForm;
-  constructor(private authService:authService) { }
+  @ViewChild('signIn') signInForm: NgForm;
+  constructor(public authService: authService) { }
 
   ngOnInit() {
   }
-  logIn()
-  {
-this.authService.logIn();
-console.log("log in sucessfully");  }
-logOut()
-{
-  
-this.authService.logOut();
-console.log("log Out");
+  logIn() {
+    // this.authService.logIn();
+    console.log("log in sucessfully");
+  }
+  logOut() {
+
+    this.authService.logOut();
+    console.log("log Out");
 
   }
-  onSignIn(f)
-  {
-    console.log(this.signInForm.value);
- 
+  async onSignIn(f:NgForm) {
+    let response = await this.authService.loginWithCredentials(this.signInForm.value.email, this.signInForm.value.password);
   }
 }

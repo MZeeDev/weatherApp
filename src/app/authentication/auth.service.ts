@@ -1,5 +1,8 @@
+import { HttpClient } from "@angular/common/http";
+
 export class authService
 {
+    constructor(public httpClient: HttpClient){}
     isLoggedIn=false;
     isAuthenticated()
     {
@@ -20,5 +23,12 @@ export class authService
     logOut()
     {
         this.isLoggedIn=false;
+    }
+    public loginWithCredentials(email, password){
+        let body = {
+            email: email,
+            password: password
+        }
+        this.httpClient.post('', body)
     }
 }
